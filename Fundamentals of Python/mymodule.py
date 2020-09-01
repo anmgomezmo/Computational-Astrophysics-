@@ -18,5 +18,5 @@ def BalmerLines(n):
     else:
         return "None"
 
-def BalmerLines2(arg):
+def BalmerLines2():
     return 0
