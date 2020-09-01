@@ -64,3 +64,11 @@ print(LorentzGamma.__doc__)
 # print(LorentzGamma?)
 
 print("\n\n")
+
+import mymodule as mym
+
+print(mym.BalmerLines(100))
+print(mym.BalmerLines(2))
+print(mym.BalmerLines.__doc__)
+
+#mym.BalmerLines2()
