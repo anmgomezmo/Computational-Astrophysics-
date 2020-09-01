@@ -1,22 +1,17 @@
-import numpy as np
-
-c = 3E8
 def BalmerLines(n):
     '''
-    -------------------------------------------
+    ------------------------------------------
     BalmerLines(n)
-    -------------------------------------------
+    ------------------------------------------
     Returns the value of the wavelenght lambda
     (in meters) for a given value of n in the
-    Balmer series (n <= 3).
-
-    If n < 3 returns None
-    -------------------------------------------
+    Balmer series (n<=3).
+    If n<3 returns None
+    ------------------------------------------
     '''
-    if n >= 3:
-        return n/c
+    if n < 3:
+        return None
     else:
-        return "None"
-
-def BalmerLines2():
-    return 0
+        R = 1.09677583E7 # in untis of m^-1
+        lambda_inv = R * (1/4 - 1/n**2)
+        return 1/lambda_inv
