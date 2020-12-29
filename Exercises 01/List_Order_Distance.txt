@@ -1,1 +1,12 @@
-# List of stars sorted by distance from the earth
+# List of stars sorted by distance from the earth 
+’Alpha Centauri C’ , 4.20 
+’Alpha Centauri A’ , 4.30 
+’Alpha Centauri B’ , 4.30 
+"Barnard’s Star" , 6.00 
+’Wolf 359’ , 7.70 
+’BD +36 degrees 2147’ , 8.20 
+’Luyten 726-8 A’ , 8.40 
+’Luyten 726-8 B’ , 8.40 
+’Sirius A’ , 8.60 
+’Sirius B’ , 8.60 
+’Ross 154’ , 9.40 

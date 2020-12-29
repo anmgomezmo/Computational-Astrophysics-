@@ -1,0 +1,12 @@
+# List of stars sorted by luminosity from the earth 
+’Wolf 359’ , 2.00e-05 
+’Luyten 726-8 B’ , 4.00e-05 
+’Alpha Centauri B’ , 6.00e-05 
+’Luyten 726-8 A’ , 6.00e-05 
+"Barnard’s Star" , 5.00e-04 
+’Ross 154’ , 5.00e-04 
+’Sirius B’ , 3.00e-03 
+’BD +36 degrees 2147’ , 6.00e-03 
+’Alpha Centauri A’ , 4.50e-01 
+’Alpha Centauri C’ , 1.56e+00 
+’Sirius A’ , 2.36e+01 

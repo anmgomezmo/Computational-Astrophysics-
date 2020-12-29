@@ -25,26 +25,67 @@ import numpy as np
 
 def List_Order_Distance(array1,array2):
     outfile = open('List_Order_Distance.txt','w')
-    headerstring = '# List of stars sorted by distance from the earth'
+    headerstring = '# List of stars sorted by distance from the earth \n'
     outfile.write(headerstring)
 
     N = 11
     List = array2[:,0]
+    Names = array1
     for m in range(0,N):
         for n in range(0,N-1):
             d = List[n]
             d_f = List[n+1]
+            Na = Names[n]
+            Na_f = Names[n+1]
             if d<=d_f:
                 List[n] = d
                 List[n+1] = d_f
+                Names[n] = Na
+                Names[n+1] = Na_f
             else:
                 List[n] = d_f
                 List[n+1] = d
+                Names[n] = Na_f
+                Names[n+1] = Na
 
-            aux = List[n]
-            if m==N-1:
-                outstring = f'\n {aux:.2f}'
-                outfile.write(outstring)
+    for n in range(0,N):
+        outstring = f' , {List[n]:.2f} \n'
+        outfile.write(Names[n])
+        outfile.write(outstring)
+
+    outfile.close()
+    return List
+
+
+def List_Order_Luminosity(array1,array2):
+    outfile = open('List_Order_Luminosity.txt','w')
+    headerstring = '# List of stars sorted by luminosity from the earth \n'
+    outfile.write(headerstring)
+
+    N = 11
+    List = array2[:,2]
+    Names = array1
+    for m in range(0,N):
+        for n in range(0,N-1):
+            d = List[n]
+            d_f = List[n+1]
+            Na = Names[n]
+            Na_f = Names[n+1]
+            if d<=d_f:
+                List[n] = d
+                List[n+1] = d_f
+                Names[n] = Na
+                Names[n+1] = Na_f
+            else:
+                List[n] = d_f
+                List[n+1] = d
+                Names[n] = Na_f
+                Names[n+1] = Na
+
+    for n in range(0,N):
+        outstring = f' , {List[n]:.2e} \n'
+        outfile.write(Names[n])
+        outfile.write(outstring)
 
     outfile.close()
     return List
@@ -56,3 +97,4 @@ data2 = np.loadtxt("stars_data.txt", comments = "#", delimiter = ",", usecols = 
 print(data1, "\n", data2)
 print(data1.shape,data2.shape)
 print(List_Order_Distance(data1,data2))
+print(List_Order_Luminosity(data1,data2))
